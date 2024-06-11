@@ -32,7 +32,7 @@ export const Bookshelf = () => {
                 action={
                   <button
                     onClick={() => deleteFromBookshelf(book.key)}
-                    className='mt-auto flex gap-1 w-full justify-center items-center text-primary-foreground bg-primary hover:bg-primary/90 rounded-md py-2 px-3'
+                    className='mt-auto flex gap-1 w-full justify-center items-center text-destructive border-destructive border hover:bg-destructive/10 rounded-md py-2 px-3'
                   >
                     <TrashIcon className='h-5' />
                     <span>Delete from Bookshelf</span>
