@@ -1,9 +1,28 @@
-function App() {
-  return (
-    <>
-      <h1 className='font-bold text-5xl'>Hello, World!</h1>
-    </>
-  );
-}
+import { Route, Routes } from 'react-router-dom';
 
-export default App;
+import { RootLayout } from './components/layout/root-layout';
+import { Bookshelf } from './components/pages/bookshelf';
+import { Home } from './components/pages/home';
+import { NotFound } from './components/pages/not-found';
+
+export const App = () => (
+  <Routes>
+    <Route
+      path='/'
+      element={<RootLayout />}
+    >
+      <Route
+        index
+        element={<Home />}
+      />
+      <Route
+        path='bookshelf'
+        element={<Bookshelf />}
+      />
+      <Route
+        path='*'
+        element={<NotFound />}
+      />
+    </Route>
+  </Routes>
+);

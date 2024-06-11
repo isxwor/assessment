@@ -1,7 +1,11 @@
+import './index.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+
+import { App } from './App';
+import { SearchProvider } from './context/search';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +13,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <SearchProvider>
+        <App />
+      </SearchProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
