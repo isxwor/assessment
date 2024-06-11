@@ -4,12 +4,16 @@ import { BookmarkIcon } from '../icons/bookmark';
 export const Appbar = () => (
   <header className='sticky top-0 border-b z-10 bg-background py-4'>
     <div className='container flex items-center justify-between'>
-      <Link to='/'>
+      <Link
+        to='/'
+        className='flex gap-2 items-center'
+      >
         <img
-          src='/me_logo.png'
-          alt="Marquee Equity's logo"
+          src='./logo512.png'
+          alt='Dummy Logo'
           className='h-10'
         />
+        <span className='font-medium text-2xl text-primary'>Library</span>
       </Link>
       <Link
         to='/bookshelf'
