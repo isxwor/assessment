@@ -13,7 +13,9 @@ export const Appbar = () => (
           alt='Dummy Logo'
           className='h-10'
         />
-        <span className='font-medium text-2xl text-primary'>Library</span>
+        <span className='font-medium text-2xl text-primary'>
+          Personal Bookshelf
+        </span>
       </Link>
       <Link
         to='/bookshelf'
